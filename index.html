@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="icon-logo">
+                <i class="fa-solid fa-coins"></i>
+            </div>
+            <div class="typer">
+                <h2><span class="text"></span><span class="span-typer">|</span></h2>
+            </div>
+            <div class="theme">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+        </div>
+        <div class="inputs">
+            <div class="input">
+                <label for="inp">Ammount</label>
+                <input type="text" id="inp">
+            </div>
+            <div class="input">
+                <span>From</span>
+                <select name="currency" id="from">
+                    <option value="USD">الدولار الأمريكي (USD)</option>
+                    <option value="EGP">الجنيه المصري (EGP)</option>
+                </select>
+            </div>
+            <div class="input">
+                <span>To</span>
+                <select name="currency" id="to">
+                    <option value="EGP">الجنيه المصري (EGP)</option>
+                    <option value="USD" class="active">الدولار الأمريكي (USD)</option>
+                    <option value="GBP">الجنيه الإسترليني (GBP)</option>
+                    <option value="EUR">اليورو (EUR)</option>
+                    <option value="SAR">الريال السعودي (SAR)</option>
+                </select>
+            </div>
+        </div>
+        <div class="btn">
+            <button>Convert</button>
+        </div>
+        <div class="outputs">
+            <div class="result">
+                <span class="result-text">Result : </span>
+                <span class="span-result"></span>
+            </div>
+            <div class="some-info">
+                <p>1 USD = <span class="EGP"></span> EGP</p>
+                <p>1 USD = <span class="SAR"></span> SAR</p>
+                <p>1 USD = <span class="GBP"></span> GBP</p>
+                <p>1 USD = <span class="EUR"></span> EUR</p>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>

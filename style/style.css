@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --Main-Back : #b9d1d7;
+    --Second-Back : #FFF;
+    --Main-Color : black;
+    --Second-Color : #FFF;
+    --Writer-Color : #00d5ff;
+}
+body.dark {
+    --Main-Back : #012c33;
+    --Second-Back : #023c45;
+    --Main-Color : #FFF;
+    --Second-Color : black;
+    --box-shadow : 0 0 15px var(--Writer-Color);
+}
+body {
+    background-color: var(--Main-Back);
+    transition: .3s;
+}
+.container {
+    background-color: var(--Second-Back);
+    padding: 20px;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+.container .logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .logo .icon-logo ,
+.container .logo .theme{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+.container .logo .icon-logo i {
+    font-size: 40px;
+    text-align: center;
+    color: gold;
+}
+.container .logo .typer h2 span.text{
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--Main-Color);
+}
+.container .logo .typer span.span-typer {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--Writer-Color);
+    animation: writer .5s linear infinite;
+}
+@keyframes writer {
+    0% , 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+.container .logo .theme i{
+    font-size: 40px;
+    color: #00d5ff;
+    cursor: pointer;
+}
+.container .logo .theme i.fa-sun {
+    color: gold;
+}
+.container .inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.container .inputs .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+.container .inputs .input label ,
+.container .inputs .input span {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--Main-Color);
+}
+.container .inputs .input input {
+    width: 100%;
+    height: 50px;
+    background-color: var(--Writer-Color);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+.container .inputs .input select {
+    background-color: var(--Writer-Color);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+}
+.container .inputs .input select option {
+    background-color: #FFF;
+}
+.container .btn {
+    margin-top: 40px;
+}
+.container .btn button {
+    width: 100%;
+    font-size: 30px;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--Main-Color);
+    background-color: gold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+.container .btn button:hover {
+    background-color: greenyellow;
+}
+.container .outputs {
+    margin-top: 20px;
+    display: none;
+}
+.container .outputs .result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .outputs .result span {
+    width: 40%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: var(--Writer-Color);
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.container .outputs .result .result-text::after {
+    content: '';
+    position: absolute;
+    border: 24px solid;
+    border-color: transparent transparent transparent var(--Writer-Color);
+    right: -46px;
+    top: 50%;
+    translate: 0 -50%;
+}
+.container .outputs .some-info {
+    margin-top: 30px;
+    text-align: center;
+}
+.container .outputs .some-info p {
+    background-color: gold;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+.container .outputs .some-info p span {
+    color: blue;
+}
+.container .outputs .some-info p:hover {
+    background-color: var(--Writer-Color);
+}
+.disbled {
+    display: none;
+}
+@media (max-width : 991px){
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    body .container {
+        margin: 0;
+    }
+    body .container .inputs {
+        flex-direction: column;
+    }
+    body .container .inputs .input {
+        width: 100%;
+    }
+}
+@media (max-width:767px){
+    .container {
+        width: 600px;
+    }
+}
+/* Start Media */
+@media (min-width:768px) {
+    .container {
+        width:750px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+        width:970px;
+    }
+}
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Media */
